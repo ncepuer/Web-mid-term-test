@@ -1,0 +1,101 @@
+<!-- 作者：杜若聪 计算1801 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>江西省抗疫进行时-抗议大事记</title>
+    <link rel="icon" type="image/x-icon" href="figures/logo.png" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" type="text/css" href="css/timeAxis1.css">
+    <script type="text/javascript" src="js/site.js"></script>
+    <audio id="player" src="figures/Apollo s Triumph.mp3" loop="true" autoplay></audio>
+</head>
+
+<body style="background-image: url('figures/bgp2.png'); background-size: 100%;">
+
+    <div id="header">
+        <div class="container">
+            <p>点击按钮打开/关闭背景音乐->
+                <button style="text-align: right;" id="btn" onclick="a();">Music</button>
+            </p>
+        </div>
+    </div>
+
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="topic1.html">江西疫情数据</a></li>
+            <li><a href="topic2.html" style="color:#1E90FF;">江西抗疫大事记</a></li>
+            <li><a href="http://www.jiangxi.gov.cn/col/col33242/index.html" target="_blank">江西省人民政府疫情防控专栏</a></li>
+            <li><a href="http://ad.jxnews.com.cn/lm/2020/yqfypt/" target="_blank">江西抗疫防疫公益服务平台</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+
+        <div>
+            <p class="time">2020年</p>
+        </div>
+
+        <div class="cx-time-main" id="cxTime"></div>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/timeAxis1.js"></script>
+        <script type="text/javascript">
+            var oTimeAxiosFun = null;
+            $(function () {
+                var timeList = [
+                    { time: '01月17日', name: '江西省卫生健康委牵头建立省应对疫情联防联控工作机制' },
+                    { time: '01月20日', name: '江西省政府召开全省疫情防控工作会议' },
+                    { time: '01月21日', name: '国家卫生健康委确认江西<span style="font-weight:bold; color:#DC143C;">首例</span>输入性新型冠状病毒感染的肺炎确诊病例' },
+                    { time: '01月24日', name: '江西省新型冠状病毒感染的肺炎疫情防控工作调度会召开,江西启动<span style="font-weight:bold; color:#DC143C;">重大突发公共卫生事件一级响应</span>' },
+                    { time: '01月25日', name: '江西省新型冠状病毒感染的肺炎疫情防控应急指挥部发布<span style="font-weight:bold; color:#DC143C;">第1号令</span>' },
+                    { time: '01月26日', name: '江西省委召开常委会会议,决定成立书记省长任组长的省委应对疫情工作领导小组' },
+                    { time: '01月27日', name: '江西<span style="font-weight:bold; color:#DC143C;">第一批</span>援助武汉医疗队<span style="font-weight:bold; color:#DC143C;">138名</span>医务人员从南昌启程赶赴湖北' },
+                    { time: '01月29日', name: '江西首场新型冠状病毒感染的肺炎疫情防控工作新闻发布会在南昌举行' },
+                    { time: '02月06日', name: '由135名队员组成的江西省首批援助随州医疗队集结完毕,奔赴一线' },
+                    { time: '02月11日', name: '江西省<span style="font-weight:bold; color:#DC143C;">首例</span>危重型新冠肺炎患者在南昌大学第一附属医院治愈出院' },
+                    { time: '02月12日', name: '南昌首个因新型冠状病毒感染的肺炎疫情而封闭的小区皇冠国际社区正式解封' },
+                    { time: '02月19日', name: '江西首批总计216200毫升的血液,从南昌启程,送往湖北黄石市_鄂州市_咸宁市等地' },
+                    { time: '02月20日', name: '2020年2月20日0至24时,江西首日<span style="font-weight:bold; color:#DC143C;">0新增</span>确诊病例' },
+                    { time: '02月26日', name: '江西首趟复工复产包机航班,满载着上百名返岗职工降落在南昌昌北机场' },
+                    { time: '03月08日', name: '江西援助湖北医疗队所在江岸,江汉两方舱医院正式休舱' },
+                    { time: '03月11日', name: '江西所有确诊病例<span style="font-weight:bold; color:#DC143C;">全部清零</span>' },
+                    { time: '03月12日', name: '江西重大突发公共卫生事件应急一级响应<span style="font-weight:bold; color:#DC143C;">降为二级响应</span>' },
+                    { time: '03月xx日', name: '' },
+                ];//参数列表
+                var param = {
+                    data: timeList, // 数据
+                    id: 'cxTime', //dom节点ID
+                    index: 0, // 选中时间节点
+                    sort: 'just', // 正序just，反序back, 其他表示不排序
+                    sortKey: 'time', //排序的参数key
+                    // activeColor: '#26a69a', // 选中颜色
+                    props: ['time', 'name'], //展示的key
+                    then: function (data) {
+                        console.log(data);
+                    }, //点击事件回调方法
+                }
+                oTimeAxiosFun = new oTimeAxios(param);
+            })
+        </script>
+
+        <div>
+            <p class="time">胜利</p>
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <div class="container">
+            <p>
+                <a href="mailto:someone@example.com?Subject=请留下您的想法!" target="_top">联系我们</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

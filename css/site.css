@@ -1,0 +1,144 @@
+#header{
+	height: 25px;
+	background-color: #2D2D2D;
+}
+#header p{
+    float: right;
+    margin: 2px 10px;
+    font-size: 65%;
+    color: azure;
+    line-height: 0px;
+}
+
+#nav{
+	height: 50px;
+	background-color: #EEEEEE;
+}
+#nav li{
+    list-style-type: none;
+	float: left;
+	margin: 0px 15px;
+	line-height: 50px;
+}
+#nav li a{
+    font-size: larger;
+	color: #666666;
+	font-weight: bold;
+}
+#nav li a:hover{
+	color: #1E90FF;
+}
+
+#main{
+	margin-top: 20px;
+	clear: left;
+}
+#aside { 
+	margin-bottom: 20px;
+	float:left; 
+	width:35%; 
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+}
+#aside p{
+	padding-bottom: 20px;
+	font-size: 30px;
+	font-family: Helvetica;
+	line-height: 50px;
+}
+#content{
+	float: left;
+	width: 65%;
+}
+#content img{
+	width: 98%;
+	height: 100%;
+}
+
+#footer{
+	height: 40px;
+	background-color: #2D2D2D;
+	clear: both;
+}
+#footer p{
+	line-height: 40px;
+}
+#footer p a{
+    float: right;
+	color: #fff;
+	margin: 0px 30px;
+}
+#footer p a:hover{
+	color: #1E90FF;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+a{
+	color: #666;
+	text-decoration: none;
+}
+.note{
+	color: #666666;
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#data table{
+    width: 100%;
+    border-collapse: collapse;
+}
+#data table caption{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+#data th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+}
+#data table thead tr th{
+	color: #fff;
+}
+#data table thead tr th:nth-child(1){
+    background-color: #8470FF;
+}
+#data table thead tr th:nth-child(2){
+    background-color: #FFA07A;
+}
+#data table thead tr th:nth-child(3){
+    background-color: #CD5555;
+}
+#data table thead tr th:nth-child(4){
+    background-color: #B5B5B5;
+}
+#data table thead tr th:nth-child(5){
+    background-color: #B0E0E6;
+}
+#data table tbody tr:hover{
+    background-color: #ccc;
+}
+#data table tbody tr td:first-child{
+    color: #666;
+}
+#data table tfoot tr td{
+	font-size: larger;
+	font-weight: bold;
+}
+
+#graph table{
+	font-weight: bold;
+    width: 100%;
+    border-collapse: collapse;
+}
+#graph table tr:nth-child(2) td{
+	font-size: larger;
+}
